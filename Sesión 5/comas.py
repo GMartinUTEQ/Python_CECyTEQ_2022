@@ -7,6 +7,6 @@ with open("profes.csv") as file:
     lector = csv.reader(file)
 
     for row in lector:
-        nombres = nombres + ", " + str(",".join(row))
+        nombres = nombres + str("Nombre: ".join(row)) + ", "
 
 print(nombres)
