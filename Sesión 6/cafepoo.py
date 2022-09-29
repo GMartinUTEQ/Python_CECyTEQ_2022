@@ -1,5 +1,8 @@
+
 # FileName: hola_mundo <- Sneak Case.
 # Class: HolaMundo <- Camel Case.
+
+
 class Cafepoo:
     # Constructor
     def __init__(self, nombre, precio):
@@ -28,5 +31,22 @@ class Cafepoo:
                 print("Importe exacto.")
             else:
                 print("Tu cambio es: $", self.obtener_cambio(presupuesto))
+            return presupuesto - self.precio
+            #exit("Gracias por su compra.")
 
-            exit("Gracias por su compra.")
+
+mediano = Cafepoo("Mediano", 50)
+grande = Cafepoo("Grande", 60)
+chico = Cafepoo("Chico", 35)
+
+#a = [mediano, chico, grande]
+
+try:
+    presupuesto = float(input("Cual es tu presupuesto ?: "))
+except:
+    exit("El sistema solo recibe números")
+
+for cafe in [mediano, chico, grande]:
+    presupuesto = cafe.vender(presupuesto)
+
+    print(presupuesto)
